@@ -1,0 +1,1129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    --w:2px; /* Thiclness of the line */
+    --n:8;   /* number of lines */
+    
+    background: linear-gradient(90deg, #0000 calc(100% - var(--w)), rgb(0, 0, 0) 0);
+    background-size: calc((100% - var(--n)*var(--w))/(var(--n) + 1) + var(--w)) 100%;
+}
+ svg{
+    width: 100%;
+    display: block;
+}
+.cursor{
+    width: 0.5px;
+    max-height: 0.5px;
+    position: fixed;
+    margin-left: -22px;
+    margin-top: -22px;
+}
+h1{
+    font-family: bianzhidai_noBG;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+}
+h2{
+    font-family: Velvelyne;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+h3{
+    font-family: Velvelyne;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+h4{
+    font-family: bianzhidai_noBG;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    color: #0039FF;
+}
+h5{
+    font-family: Velvelyne;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+p{
+    font-family: Velvelyne;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.progress_bar {
+    position: fixed;
+    height: 10px;
+    width: 4px;
+    background-color:#0039FF;
+    transition: background-color .5s; 
+    /* transition: all 1s; */
+    z-index: 10;
+}
+.progress_bar_portland{
+    position: fixed;
+    height: 10px;
+    width: 2px;
+    background-color: #FF1E00;
+    transition: background-color .5s; 
+    /*transition: all 1s;*/
+    z-index: 10;
+}
+
+/* .white {
+    color: rgb(224, 224, 224) !important;
+} */
+a{
+    float:right;
+    font-family: Velvelyne;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    color: #0039FF;
+}
+.navbar a:hover {
+    border-bottom: 1px solid #0039FF;
+  }
+  .navbar-2 a:hover{
+    border-bottom: 1px solid #FF1E00;
+  }
+.navbar{
+    font-family: Velvelyne;
+    /* font-size: 20px; */
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display:flex;
+    align-items: center;
+}
+.navbar-2{
+    font-family: Velvelyne;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display:flex;
+    align-items: center;
+}
+.navbar-2 a{
+    color:#FF1E00;
+}
+.navbar-yemen{
+    font-family: Velvelyne;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display:flex;
+    align-items: center;
+}
+.navbar-yemen a{
+    color: black;
+}
+.navbar-yemen a:hover{
+    border-bottom: 1px solid black;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 60px;
+    top:0; 
+    backdrop-filter: blur(10.2px);
+    align-items: center;  
+    position: fixed;
+}
+.header-portland{
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 60px;
+    top:0; 
+    backdrop-filter: blur(10.2px);
+    align-items: center;  
+    position: fixed;
+}
+.header-yemen{
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 60px;
+    top:0; 
+    backdrop-filter: blur(10.2px);
+    align-items: center;  
+    position: fixed;
+}
+.title{
+    align-items: center;
+    color: #0039FF;
+    font-family: bianzhidai_noBG;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+}
+.title-portland{
+    align-items: center;
+    color:#FF1E00;
+    font-family: bianzhidai_noBG;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+}
+.title-yemen{
+    align-items: center;
+    color:black;
+    font-family: bianzhidai_noBG;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+}
+.dropbtn {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    backdrop-filter: blur(10.2px);
+  }
+  .dropbtn-2{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    backdrop-filter: blur(10.2px);
+  }
+  .dropbtn-yemen{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    backdrop-filter: blur(10.2px);
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-portland{
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-yemen{
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px, solid #0039FF;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content-2{
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px, solid #FF1E00;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content-yemen{
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px, solid black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color:#0039FF;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content-2 a{
+    color: #FF1E00;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content-yemen a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover {background-color:rgba(255, 255, 255, 0.4);}
+  .dropdown:hover .dropdown-content {display: block;}
+  .dropdown:hover .dropbtn {background-color:rgba(255, 255, 255, 0.4);}
+  
+  .dropdown-content a:hover{background-color:rgba(255, 255, 255, 0.4);}
+  .dropdown-portland:hover .dropdown-content-2 {display:block;}
+  .dropdown-portland:hover .dropbtn-2{background-color:rgba(255, 255, 255, 0.4);}
+
+  
+  .dropdown-content-yemen a:hover{background-color:rgba(255, 255, 255, 0.4);}
+  .dropdown-yemen:hover .dropdown-content-yemen{display:block;}
+  .dropdown-yemen:hover .dropbtn-yemen{background-color:rgba(255, 255, 255, 0.4);}
+ .grid{
+    display: grid; 
+    grid-template-columns: repeat(9,100px);
+    gap: 75px;
+}
+.span-4 {
+    grid-column: span 4;
+}
+.title-home{
+    /* width:100%; */
+    color: #0039FF;
+    align-items: center;
+    margin-top: 500px;
+    margin-left: 700px;
+    margin-right: 73px;
+  
+}
+.camel-img{
+    margin-left: 858px;
+    margin-top: 171px;
+    z-index: 2;
+    /* width:100%; */
+    /* border: 1px solid red;  */
+}
+.container-home{
+    width: 100%;
+    /* max-width: 100%; */
+    background-color: #0039FF;
+    height:700px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    display: flex;
+}
+.section {
+    /* height: 100vh; */
+    /* padding: 70px 20%; */
+    overflow: hidden;
+}
+.grandfather{
+    margin-left:1550px;
+    margin-top: 500px; 
+    display:block; 
+    z-index:999; 
+}
+.grandfather img{
+    transition: transform .2s;  
+}
+.grandfather img:hover{
+    transform: scale(3);
+}
+.grandfather-writing{
+    margin-top: 100px;
+    margin-left: 2500px;
+    display:block; 
+    z-index:999; 
+}
+.grandfather-writing img{
+    transition: transform .2s; 
+}
+.grandfather-writing img:hover{
+    transform: scale(3);
+}
+.grandma-uncle{
+    margin-left:515px;
+    margin-bottom: 500px;
+    margin-top: 100px;
+    display:block; 
+    z-index:999; 
+}
+.grandma-uncle img{
+    transition: transform .2s; 
+}
+.grandma-uncle img:hover{
+    transform: scale(3);
+}
+.grandma-writing{
+    margin-top: 197px;
+    margin-left:250px;
+    display:block; 
+    z-index:999; 
+}
+.grandma-writing img{
+    transition: transform .2s; 
+}
+.grandma-writing img:hover{
+    transform: scale(3);
+}
+.hooyo{
+    margin-top: 100px;
+    margin-left:870px;
+    display:block; 
+    z-index:999; 
+}
+.hooyo img{
+    transition: transform .2s;
+}
+.hooyo img:hover{
+    transform: scale(3);
+}
+.cousin2{
+    margin-top: 300px;
+    margin-left:1550px;
+    display:block; 
+    z-index:999; 
+}
+.cousin2 img{
+    transition: transform .2s;
+}
+.cousin2 img:hover{
+    transform: scale(3);
+}
+.aunt{
+    margin-top:1px;
+    margin-left:2170px;
+    display:block; 
+    z-index:999; 
+}
+.aunt img{
+    transition: transform .2s
+}
+.aunt img:hover{
+    transform: scale(3);
+}
+.me-somalia{
+    margin-top: 200px;
+    margin-left:270px;
+    display:block; 
+    z-index:999; 
+}
+.me-somalia img{
+    transition: transform .2s
+}
+.me-somalia img:hover{
+    transform: scale(3);
+}
+.me-georgia{
+    margin-top: 50px;
+    margin-left: 1200px;
+    display:block; 
+    z-index:999; 
+}
+.me-georgia img{
+    transition: transform .2s
+}
+.me-georgia img:hover{
+    transform: scale(3);
+}
+.cousin-one{
+    margin-bottom:200px;
+    margin-left:2150px;
+    display:block; 
+    z-index:999; 
+}
+.cousin-one img{
+    transition: transform .2s
+}
+.cousin-one img:hover{
+    transform: scale(3);
+}
+.headline{
+    margin-left:1850px;
+    color:#0039FF;
+    margin-top: 50px;
+}
+article h2{
+    margin-left:1850px;
+    color:#0039FF;
+    margin-top: 50px;
+}
+article{
+    transform:translateY(-50%);
+    
+}
+
+footer{
+    align-items: center;
+    margin-left: 1839px;
+    padding-bottom: 100px;
+}
+footer a:hover{
+    border-bottom: 3px solid #0039FF;
+}
+footer .footer-somalia{
+    align-items: center;
+    /* margin-left: 1839px; */
+    padding-bottom: 100px;
+    margin-top: 792px;
+}
+footer .footer-somalia a{
+    color:#FF1E00;
+}
+footer .footer-somalia a:hover{
+    border-bottom: 3px solid #FF1E00;
+}
+.diaspora-about{
+    color:#0039FF;
+    margin-top:400px;
+    margin-left:206px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+.about-text1{
+    color: #0039FF;
+    width: 210px;
+    height: 307px;
+    flex-shrink: 0;
+    margin-left:1950px;
+    margin-top: 50px;
+}
+.about-text1 p{
+    font-size: 24px;
+}
+.about-text2{
+    color:#0039FF;
+    width: 210px;
+    height: 307px;
+    flex-shrink: 0;
+    margin-left: 150px;
+    margin-top: 50px;
+    /* margin-bottom: 500px; */
+}
+.about-text2 p{
+    font-size: 24px;
+}
+.about-text3 p{
+    font-size: 24px;
+}
+.about-text3{
+    color:#0039FF;
+    width: 210px;
+    height: 307px;
+    /* flex-shrink: 0; */
+    margin-left: 1950px;
+}
+.container-about{
+    background-color:#0039FF;
+    /* width: 100%; */
+    margin-top: 833px;
+    /* height: 3445px; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    display: flex;
+    padding-bottom: 200px;
+}
+.section_2{
+    /* height: 100vh; */
+    /* padding: 70px 20%; */
+    overflow: hidden;
+}
+
+.diaspora-text{
+    color: white;
+    margin-left: 200px;
+    margin-top: 200px;
+    /* padding-top: 200px; */
+    /* border: 2px solid red; */  
+}
+.african-map{
+    margin-left: 742px;
+    margin-top: 132px;
+    flex-direction: column;
+    /* display: flex; */
+    /* width: 2315px;
+    height: 1138px;
+    flex-shrink: 0; */
+    /* border: 2px solid red;   */ 
+}
+.what-diaspora{
+    color:white;
+    margin-left:604px;
+    margin-top: 200px;
+}
+.blue-diaspora-text1{
+    color:white;
+    /* width: 200px; */
+    /* margin-top: 100px; */
+    margin-left: 1202px;
+    display: flex;
+    flex-direction: column;
+} 
+.blue-diaspora-text2{
+    color:white;
+    /* border: 5px solid red;  */
+    /* width: 200px; */
+    margin-left: 107px;   
+    /* margin-top: 100px; */
+    display: flex;
+    flex-direction: column;
+}
+.blue-diaspora-text3{
+    color:white;
+    margin-left: 107px;
+    /* margin-top: 100px; */
+    display: flex;
+    flex-direction: column;
+}
+ .grid-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 300px 300px 300px; */
+ }
+ .grid-3{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 300px 300px 300px; */ 
+ }
+ .span-4{
+    grid-column: span 4;
+ }
+.arrow-about{
+    margin-left: 2100px;
+}
+.why-diaspora{
+    color:white;
+    margin-left: 600px;
+    margin-top: 700px;
+    /* padding-bottom: 100px; */
+}
+.blue-diaspora-text4{
+    color:white;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1227px;
+    /* padding-bottom: 100px; */
+}
+.somalia-map-about{
+    display: flex;
+    flex-direction: column;
+    margin-left: 399px;
+    /* padding-bottom: 100px; */
+     /* padding-bottom: 434px; */
+}
+.disclaimer-diasporic{
+    color: #ffffff;
+    width: 605px;
+    margin-left: 600px;
+    margin-top: 200px;
+}
+.disclaimer-text {
+    color:#ffffff;
+    width: 231px;
+    height: 360px;
+    flex-shrink: 0;
+    margin-left: 1222px;
+}
+.grid-about{
+    display: grid; 
+    grid-template-columns: repeat(9,100px);
+    gap: 75px;
+    padding-top: 755px;
+}
+.al-bayda-title{
+    margin-left: 211px;
+    margin-top: 354px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+.arrow-two-yemen{
+    margin-left: 90px;
+    margin-top: 900px;
+}
+.yemen-1{
+    margin-left: 150px;
+    margin-top: 880px;
+}
+.yemen-1 img{
+    transition: transform .2s;  
+}
+.yemen-1 img:hover{
+    transform: scale(3);
+}
+.yemen-2{
+    margin-top: 400px;
+    margin-left:1519px;
+}
+.yemen-2 img{
+    transition: transform .2s; 
+}
+.yemen-2 img:hover{
+    transform: scale(3);
+}
+.yemen-3{
+    margin-left: 2500px;
+    margin-top:250px;
+}
+.yemen-3 img{
+    transition: transform .2s; 
+}
+.yemen-3 img:hover{
+    transform: scale(3);
+}
+.arrow-3-yemen{
+    margin-left: 2680px;
+}
+.yemen-4{
+    margin-top: 1800px;
+    margin-left: 280px;
+}
+.yemen-4 img{
+    transition: transform .2s; 
+}
+.yemen-4 img:hover{
+    transform: scale(3);
+}
+.yemen-5{
+    margin-left: 1551px;
+    margin-top: 1000px;
+}
+.yemen-5 img{
+    transition: transform .2s; 
+}
+.yemen-5 img:hover{
+    transform: scale(3);
+}
+.yemen-6{
+    margin-left: 2504px;
+    margin-top: 650px;
+}
+.yemen-6 img{
+    transition: transform .2s; 
+}
+.yemen-6 img:hover{
+    transform: scale(3);
+}
+.yemen-7{
+    margin-left: 554px;
+    margin-top: 1500px;
+}
+.yemen-7 img{
+    transition: transform .2s; 
+}
+.yemen-7 img:hover{
+    transform: scale(3);
+}
+.yemen-8{
+    margin-left: 2147px;
+    margin-top: 1495px;
+}
+.yemen-8 img{
+    transition: transform .2s; 
+}
+.yemen-8 img:hover{
+    transform: scale(3);
+}
+.subtitle-yemen-1{
+    color: #000;
+    margin-left: 509px;
+    margin-top: 300px;
+    width: 396px;
+    height: 171px;
+}
+.yemen-text1{
+    width: 193px;
+    height: 168px;
+    color: #000;
+    margin-top: 85px;
+    margin-left: 650px;
+}
+.subtitle-yemen-2{
+    color:#000;
+    width: 481px;
+    height: 239px;
+    margin-left: 1700px;
+    margin-top:168px;
+}
+.yemen-text2{
+    color:#000;
+    margin-top: 52px;
+    width: 141px;
+    height: 219px;
+    margin-left: 653px;
+}
+.yemen-text3{
+    color:#000;
+    margin-left: 1928px;
+    margin-top:119px;
+    color:#000;
+    width: 197px;
+    height: 90px;
+}
+footer .footer-yemen{
+    align-items: center;
+    /* margin-left: 1839px; */
+    padding-bottom: 100px;
+    margin-top: 792px;
+}
+footer .footer-yemen a{
+    color: #000;
+}
+footer .footer-yemen a:hover{
+    border-bottom: 3px solid #000; 
+}
+.portland-title{
+    margin-left:211px;
+    margin-top: 357px;
+    color:#FF1E00;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+.portland-1{
+    margin-top:314px;
+    margin-left: 200px;
+}
+.arrow-1-portland{
+    margin-top:300px;
+    margin-left:1007px;
+}
+.portland-2{
+   margin-top: 57px;
+   margin-left: 1000px;
+   display:block; 
+   z-index:999; 
+   
+}
+.portland-2 img{
+    transition: transform .2s;  
+}
+.portland-2 img{
+    transform: scale(3);
+}
+.portland-3{
+    margin-top: 44px;
+    margin-left: 950px;
+}
+.portland-3 img{
+    transition: transform .2s; 
+}
+.portland-3 img:hover{
+    transform: scale(3);
+}
+.portland-4{
+    margin-top: 44px;
+    margin-left:950px;
+}
+.portland-4 img{
+    transition: transform .2s;  
+}
+.portland-4 img:hover{
+    transform: scale(3);
+}
+.portland-5{
+    margin-top: 57px;
+    margin-left:970px;
+}
+.portland-5 img{
+    transition: transform .2s;  
+}
+.portland-5 img:hover{
+    transform: scale(3);
+}
+.portland-6{
+    margin-top: 57px;
+    margin-left: 970px;
+}
+.portland-6 img{
+    transition: transform .2s;  
+}
+.portland-6 img:hover{
+    transform: scale(3);
+}
+.arrow-2-portland{
+    margin-top: 81px;
+    margin-left:1007px;
+}
+.place-livedtext {
+    color:#FF1E00;
+    margin-top: 668px;
+    margin-left: 1309px;
+}
+.somalia-text1{
+    width: 200px;
+    height: 172px;
+    color:#FF1E00;   
+    margin-left: 1309px; 
+    margin-top: 58px;
+}
+.maine-map{
+    margin-left: 350px;
+}
+.plane-trail{
+    margin-top: 200px;
+    margin-left: 550px;
+    padding-right: 680px;
+}
+.schools-maine{
+    color:#FF1E00;  
+}
+.somalia-text2{
+    color:#FF1E00;
+    margin-top:100px;
+}
+.miles-text{
+    color:#FF1E00;
+    margin-top: 400px;
+}
+.somalia-text3{
+    color:#FF1E00;
+    width: 251px;
+    height: 326px;
+    margin-top: 190px;
+    margin-left: 1309px;
+}
+.somalia-text4{
+    color:#FF1E00;
+    margin-top: 100px;
+    width: 251px;
+    height: 326px;
+    margin-left:650px;
+}
+/* .portland-container{
+    background-color:#FF1E00;
+    height: 900px;
+    margin-top: 500px;
+} */
+.container-blue-somalia{
+    background-color:#0039FF;
+    /* height: 1800px; */
+    margin-top: 533px;
+}
+.title-somalia{
+    color:#ffffff;
+    /* margin-top: 388px; */
+    padding-top: 188px;
+    /* margin-top: 388px; */
+    margin-left: 202px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+.somalia-top-text{
+    color: #ffffff;
+    margin-left:1567px;
+    padding-top: 280px; 
+}
+.somalia-blue-text1{
+    color:#ffffff;
+    /* margin-left: 218px; */
+    margin-top: 67px;
+    margin-left: 1580px;
+}
+.somalia-of-me{
+    margin-left: 766px;
+    margin-top: 100px;
+    padding-bottom: 400px;
+}
+.gate-somalia{
+    margin-left: 999px;
+    margin-top: 227px;
+}
+.road-trail{
+    margin-top: 257px;
+    padding-right: 550px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    display: flex;
+}
+.road-text{
+    color:#0039FF;
+    margin-top: 608px;
+}
+body .pointed-arch{
+    background-image: url(images/pointed\ arch.png);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size:contain ;
+    /* width: 100%;
+    height: 100%; */
+    position:absolute;
+    /* top:0;
+    bottom: 0;  */
+    width: 1953px;
+    height: 3610px;
+    margin-top: 1067px;
+    margin-left:466px;
+}
+.disconnection-arch{
+    color: #0039FF;
+    margin-top: 1017px;
+    margin-left: 602px;
+}
+.pointed-text1{
+    color: #0039FF;
+    width: 180px;
+    height: 200px;
+    margin-top: 51px;
+    margin-left:1150px 
+}
+.pointed-text2{
+    color:#0039FF;
+    width: 180px;
+    height: 161px;
+    margin-top:105px;
+    margin-left: 500px;
+}
+.pointed-text3{
+    color: #0039FF;
+    width: 184px;
+    height: 180px;
+    margin-top: 77px;
+    margin-left: 1150px;
+}
+.pointed-text4{
+    color:#0039FF;
+    width: 184px;
+    height: 180px;
+    margin-top: 70px;
+    margin-left: 1200px;
+}
+.pointed-text5{
+    color:#0039FF;
+    width: 184px;
+    height: 180px;
+    margin-top: 50px;
+    margin-left: 500px;
+}
+.somali-disconnection2{
+    color:#0039FF;
+    margin-top: 180px;
+    margin-left: 1250px;
+}
+.pointed-text6{
+    color:#0039FF;
+    width: 184px;
+    height: 262px;
+    margin-top: 109px;
+    margin-left: 1150px;
+}
+
+
+
+
+
+
+
+
+
+
+/* .diasporic-timeline{
+    color:#0039FF;
+    margin-left:1599px;
+    margin-top: 355px;
+}
+.timeline-bg{
+    margin-left:20px;
+    padding-bottom: 1000px;
+}
+.timeline-bg img{
+    width: 300%;
+    max-width: 300%;
+    min-width: 100%;
+}
+
+
+#gallery{
+    height: 75vmax;
+    width: 95vmax;
+    position: relative;
+}
+
+.block{
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    z-index: 1;
+}
+
+.block:hover{
+    z-index: 2;
+}
+.block:nth-child(1){
+    margin-top: 500px;
+    left: 10%;
+    background: url(./images/Yemen\ 1\ 1.png);
+    background-size:cover;
+}
+.block:nth-child(2){
+    margin-top:200px;
+    left: 55%;
+    background: url(./images/yemen\ 2\ 1.png);
+    background-size: cover;
+}
+.block:nth-child(3){
+    top: 0;
+    left: 55%;
+    background:url(./images/yemenv2\ 5.png);
+    background-size: cover;
+}
+.block:nth-child(4){
+    top: 100%;
+    left: 0;
+    background: url(./images/yemenv2\ 4.png);
+    background-size: cover;
+} */
+
+
+
+
+
+
+
+
+
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
